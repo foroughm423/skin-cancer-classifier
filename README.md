@@ -124,7 +124,7 @@ Dense(7, softmax)
 
 Try the model live! Upload a skin lesion image and get instant predictions with confidence scores and risk categorization.
 
-**🚀 Live Demo:** [Streamlit Cloud](https://your-app-url.streamlit.app)
+**🚀 Live Demo:** [Streamlit Cloud](https://skin-cancer-classifier-mkzevixv7y2x2wmrnlvaw3.streamlit.app/)
 
 ### Demo Preview
 ![Demo](./assets/demo.gif)
@@ -232,7 +232,7 @@ skin-cancer-classifier/
 
 ## 🔗 Links
 
-- **🚀 Live Demo:** [Streamlit Cloud](https://your-app-url.streamlit.app)
+- **🚀 Live Demo:** [Streamlit Cloud](https://skin-cancer-classifier-mkzevixv7y2x2wmrnlvaw3.streamlit.app/)
 - **📓 Training Notebook (with outputs):** [Kaggle](https://www.kaggle.com/code/foroughgh95/skin-cancer-efficientnetb3-ham10000)
 - **📂 Source Code:** [GitHub](https://github.com/foroughm423/skin-cancer-classifier)
 
