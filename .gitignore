@@ -1,0 +1,24 @@
+# Secrets (IMPORTANT!)
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Models (if large)
+*.keras
+*.h5
+
+# OS
+.DS_Store
+Thumbs.db
