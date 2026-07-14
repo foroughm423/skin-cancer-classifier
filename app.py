@@ -47,7 +47,6 @@ RISK_ORDER = {
 
 # Model config
 MODEL_PATH = 'efficientnetb3_ham10000_v1.keras'
-MODEL_ZIP = 'efficientnetb3_ham10000_model.zip'
 HUGGINGFACE_REPO = 'foroughm423/skin-cancer-efficientnetb3'
 HUGGINGFACE_FILE = 'efficientnetb3_ham10000_model.zip'
 
@@ -89,23 +88,16 @@ def load_model():
                 downloaded_path = hf_hub_download(
                     repo_id=HUGGINGFACE_REPO,
                     filename=HUGGINGFACE_FILE,
-                    local_dir='.',
-                    token=HUGGINGFACE_TOKEN,
-                    local_dir_use_symlinks=False
+                    token=HUGGINGFACE_TOKEN
                 )
-                if downloaded_path != MODEL_ZIP:
-                    if os.path.exists(MODEL_ZIP):
-                        os.remove(MODEL_ZIP)
-                    os.rename(downloaded_path, MODEL_ZIP)
             except Exception as e:
                 st.error(f"Download failed: {str(e)}")
                 return None
 
         with st.spinner('Extracting model...'):
             try:
-                with zipfile.ZipFile(MODEL_ZIP, 'r') as zip_ref:
+                with zipfile.ZipFile(downloaded_path, 'r') as zip_ref:
                     zip_ref.extractall('.')
-                os.remove(MODEL_ZIP)
             except Exception as e:
                 st.error(f"Extraction failed: {str(e)}")
                 return None
